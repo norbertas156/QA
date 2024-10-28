@@ -10,11 +10,11 @@ namespace LibraryManagementSystem.Models
     {
         public string Title;
         public string Author;
-        public string ISBN_number;  // Incorrect naming convention
-        public int pgeCnt;          // Unclear and short variable name
-        public bool Checked;        // Ambiguous name for a boolean property
+        public string ISBN_number;
+        public int pgeCnt;
+        public bool Checked;
 
-        public Book(string t, string a, string isbn, int pageCnt, bool chkd) // Confusing parameter names
+        public Book(string t, string a, string isbn, int pageCnt, bool chkd)
         {
             Title = t;
             Author = a;
