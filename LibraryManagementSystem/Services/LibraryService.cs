@@ -9,8 +9,8 @@ namespace LibraryManagementSystem.Services
 {
     public class LibraryService
     {
-        private List<Book> books;                // Variable name could be more specific
-        private List<Member> allmembers;         // Inconsistent naming style with books
+        private List<Book> books;
+        private List<Member> allmembers;
 
         public LibraryService()
         {
@@ -18,15 +18,15 @@ namespace LibraryManagementSystem.Services
             allmembers = new List<Member>();
         }
 
-        public void AddBook(string title, string author, string ISBN, int pages) // Too many parameters
+        public void AddBook(string title, string author, string ISBN, int pages)
         {
-            var newBook = new Book(title, author, ISBN, pages, false); // Bool value here is unclear
+            var newBook = new Book(title, author, ISBN, pages, false);
             books.Add(newBook);
         }
 
-        public bool CheckOutBook(string isbn, int member_id) // Method name could be clearer
+        public bool CheckOutBook(string isbn, int member_id)
         {
-            foreach (var b in books) // Shortened variable name 'b'
+            foreach (var b in books)
             {
                 if (b.ISBN_number == isbn && !b.Checked)
                 {
@@ -37,13 +37,13 @@ namespace LibraryManagementSystem.Services
             return false;
         }
 
-        public void RegisterMember(string nm, string emailAddr) // Non-descriptive parameter names
+        public void RegisterMember(string nm, string emailAddr)
         {
-            var m = new Member(allmembers.Count + 1, nm, emailAddr); // Non-descriptive variable name 'm'
+            var m = new Member(allmembers.Count + 1, nm, emailAddr);
             allmembers.Add(m);
         }
 
-        public void NotifyMember(int id, string msg) // Method unrelated to LibraryService’s primary role
+        public void NotifyMember(int id, string msg)
         {
             var member = allmembers.Find(m => m.memberId == id);
             if (member != null)

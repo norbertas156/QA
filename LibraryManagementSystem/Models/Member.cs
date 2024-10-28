@@ -8,9 +8,9 @@ namespace LibraryManagementSystem.Models
 {
     public class Member
     {
-        public int memberId;          // Inconsistent naming convention
+        public int memberId;
         public string FullName;
-        public string email_address;   // Incorrect naming convention and inconsistent with FullName
+        public string email_address;
 
         public Member(int id, string name, string email)
         {

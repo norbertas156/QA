@@ -8,7 +8,7 @@ namespace LibraryManagementSystem.Services
 {
     public class NotificationService
     {
-        public void sendEmail(string email, string Msg) // Inconsistent naming convention
+        public void sendEmail(string email, string Msg)
         {
             Console.WriteLine($"Sending email to {email}: {Msg}");
         }
